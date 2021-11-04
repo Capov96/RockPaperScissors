@@ -65,14 +65,14 @@ public class Game {
       s = scanner.nextLine();
       if (s.equals("?")) {
         table.printTable();
+        continue;
       } else if (s.matches("\\d")) {
         int moveId = Integer.parseInt(s);
         if (moveId >= 0 && moveId <= options.length) {
           return moveId;
         }
-      } else {
-        System.out.println("Invalid input, try again!");
       }
+      System.out.println("Invalid input, try again!");
     } while (true);
   }
 
